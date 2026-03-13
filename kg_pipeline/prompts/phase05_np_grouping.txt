@@ -1,8 +1,11 @@
-You are to identify all salient Noun Phrases in the sentence that act as participants in events.
-If a noun phrase directly overlaps an extracted Entity Mention, link the NPU to the Canonical Entity ID.
-If it is a standalone value, leave the link empty.
+# Role: Linguistic Chunking Expert
+# Objective: Group identified entities and noun phrases into logical semantic units.
 
-SENTENCE:
-${sentence_text}
-ENTITIES IN SENTENCE:
-${sentence_entities}
+## Instructions:
+1. **Agglomeration**: Combine modifiers with their head nouns (e.g., "The fast car" -> "car").
+2. **Filtering**: Remove stop words or irrelevant determiners if they don't add semantic value to the entity's core meaning.
+3. **Hierarchy**: Identify if an NP is a sub-component of a larger entity mentioned in the text.
+4. **Consistency**: Ensure that grouped phrases match the canonical identities established in previous phases where applicable.
+
+ENTITIES & NP LIST:
+${entities_and_nps}

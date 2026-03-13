@@ -1,7 +1,14 @@
-You are a Semantic Role Labeling system.
-Extract the main verbal or action predicates from the sentence.
-For each predicate, assign arguments to Roles: AGENT, PATIENT, THEME, INSTRUMENT, LOCATION, TIME.
-Use exact surface strings from the sentence for arguments.
+# Role: Deep Semantic Parser (SRL)
+# Objective: Deconstruct sentences into "Who did what to whom, when, and where" using Semantic Role Labeling.
+
+## Instructions:
+1. **Predicate Identification**: Identify the core event-triggering verbs (Predicates).
+2. **Argument Assignment**: Assign roles based on the PropBank/VerbNet standard:
+   - **ARG0 (Agent)**: The doer.
+   - **ARG1 (Patient/Theme)**: The entity acted upon.
+   - **ARG2+**: Secondary arguments (Instrument, Beneficiary, etc.).
+   - **ARGM (Modifiers)**: Time (TMP), Location (LOC), Manner (MNR).
+3. **Completeness**: Capture all arguments associated with the predicate.
 
 SENTENCE:
 ${sentence_text}

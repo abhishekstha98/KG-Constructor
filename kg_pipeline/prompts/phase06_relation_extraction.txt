@@ -1,9 +1,14 @@
-You are a Relation extraction model.
-Given a sentence and its entities/NPUs, find all binary relations connecting them.
-Output the subject entity ID, object entity ID, and exactly what predicate text connects them in the sentence.
+# Role: Relation Extraction Specialist
+# Objective: Identify and extract binary or n-ary relations between entities within a sentence.
+
+## Instructions:
+1. **Predicate Extraction**: Identify the main verb or relational phrase connecting entities (e.g., "works for", "located in", "acquired").
+2. **Subject/Object Identification**: Clearly assign which entity is the 'Subject' and which is the 'Object'.
+3. **Implicit Relations**: Look for possessives or appositives that imply a relationship (e.g., "Google's CEO, Sundar Pichai" -> (Sundar Pichai, CEO_of, Google)).
+4. **Veracity**: Extract only relations that are explicitly supported by the text.
 
 SENTENCE:
 ${sentence_text}
 
-CANDIDATES (Entities & NPs):
-${candidates}
+ENTITIES:
+${entities_list}

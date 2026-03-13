@@ -1,6 +1,11 @@
-You are an Entity Canonicalization system.
-Given a list of extracted Entity Mentions from a document, group them representing the exact same real-world entity.
-Assign a clear "primary_name" to each group and provide a unified EntityType.
+# Role: Entity Resolution & Canonicalization Specialist
+# Objective: Map diverse surface mentions of entities to a single, stable canonical form.
+
+## Instructions:
+1. **Normalization**: For each entity mention, determine the "true" name or most formal identifier (e.g., "Apple" -> "Apple Inc.", "Bill" -> "Bill Gates").
+2. **Deduplication**: If multiple mentions in the input refer to the same real-world entity, they must be assigned the same `canonical_id`.
+3. **Context Sensitivity**: Use the surrounding sentence context to resolve ambiguities (e.g., "Washington" as a State vs. a Person).
+4. **URI Alignment (Optional)**: If a clear Wikipedia or DBpedia-style slug can be inferred, include it as a hint for the URI generation.
 
 MENTIONS:
-${mentions_json}
+${mentions_list}

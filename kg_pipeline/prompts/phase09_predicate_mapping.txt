@@ -1,10 +1,14 @@
-You are an Ontology Mapper.
-Map the raw surface text of predicates and event types to an ontology URI.
-For predicates, map to common Schema.org equivalent, Wikidata property, or a CUSTOM normalized form.
-Return the surface_form, mapped ontology_uri, and the selected mapping source.
+# Role: Ontology Mapping Specialist
+# Objective: Map extracted surface predicates to a formal ontology or schema-defined relationship types.
 
-SURFACE PREDICATES:
-${predicates}
+## Instructions:
+1. **Normalization**: Map diverse verbs to a unified predicate set (e.g., "purchased", "bought", "acquired" -> `verb:acquired`).
+2. **Schema Alignment**: Use the provided schema to find the closest match.
+3. **Hierarchy**: Use sub-property logic if the schema allows it.
+4. **Context**: Ensure the mapping respects the domain of the subject and object.
 
-EVENT TYPES:
-${event_types}
+SCHEMA:
+${schema_info}
+
+EXTRACTED RELATIONS:
+${relations_list}

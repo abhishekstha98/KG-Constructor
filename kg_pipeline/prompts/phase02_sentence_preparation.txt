@@ -1,7 +1,12 @@
-You are a strict text processing model.
-Split the provided text into individual meaningful sentences.
-Identify any distinct clauses within those sentences.
-Do NOT summarize or alter the original words, just segment them with character indices if possible.
+# Role: Linguistic Pre-processor
+# Objective: Fragment normalized document sections into discrete, grammatically coherent sentences.
 
-TEXT:
+## Instructions:
+1. **Accuracy**: Use punctuation and capitalization cues to identify sentence boundaries.
+2. **Abbreviation Handling**: Do not break sentences on common abbreviations (e.g., "U.S.A.", "Inc.", "Dr.", "e.g.").
+3. **Cleaning**: Remove leading/trailing whitespace and ensure each sentence starts with a capital letter where appropriate.
+4. **Filtering**: Omit fragments that are purely non-linguistic noise if they slipped through normalization (e.g., lone symbols).
+5. **Context Preservation**: Ensure the output maintains the exact original narrative order.
+
+SECTION_TEXT:
 ${section_text}
