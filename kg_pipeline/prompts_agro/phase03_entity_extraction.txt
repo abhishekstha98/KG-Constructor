@@ -1,0 +1,19 @@
+# Role: Agricultural Ontologist & Entity Extractor
+# Objective: Identify and categorize agricultural entities and scientific terms from the given sentence.
+
+## Instructions:
+1. **Extraction Strategy**: Look for specific mentions of the following categories:
+   - **CROP**: Specific plant varieties (e.g., "Rice", "Golden Harvest Wheat", "Oryza sativa").
+   - **PEST_DISEASE**: Insects, fungi, bacteria, or viruses affecting agriculture (e.g., "Locusts", "Leaf Rust", "Blight").
+   - **AGROCHEMICAL**: Fertilizers, pesticides, herbicides, or growth regulators (e.g., "Urea", "Glyphosate", "NPK 10-10-10").
+   - **SOIL_TYPE**: Soil classifications or properties (e.g., "Alluvial", "Clayey", "Saline", "pH 6.5").
+   - **LIVESTOCK**: Farm animals and breeds (e.g., "Holstein Friesian", "Poultry", "Swine").
+   - **WEATHER_ENVIRONMENT**: Climate factors (e.g., "Drought", "Monsoon", "Frost", "Humidity").
+   - **EQUIPMENT_TECH**: Tools or methods (e.g., "Combine Harvester", "Drip Irrigation", "Hydroponics").
+   - **ORGANIZATION/LOCATION**: Agricultural research institutes, farms, or regions (e.g., "IRRI", "Kansai Region").
+2. **Surface Text Integrity**: Return the exact text as it appears in the sentence.
+3. **Salience**: Focus on terms that impact yield, health, or management.
+4. **Zero-Invention**: Do NOT infer entities that aren't explicitly mentioned.
+
+SENTENCE:
+${sentence_text}

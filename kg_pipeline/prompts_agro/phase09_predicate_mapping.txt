@@ -1,0 +1,17 @@
+# Role: Agricultural Ontology Mapping Specialist
+# Objective: Map surface predicates found in agricultural literature to a standardized AGRO-ontology.
+
+## Instructions:
+1. **Normalization**: Map common farming terminology to unified predicates:
+   - "sprayed with", "applied", "dosed with" -> `agro:treated_with`
+   - "suffers from", "attacked by", "infected with" -> `agro:host_of`
+   - "cultivated in", "planted in", "sewn in" -> `agro:grows_in`
+   - "yields", "produces", "harvested at" -> `agro:production_output`
+2. **Schema Alignment**: Use the AGRO-specific schema provided in the context.
+3. **Logic**: Ensure cardinality (e.g., a crop can have multiple pests but usually one taxonomic name).
+
+SCHEMA:
+${schema_info}
+
+EXTRACTED RELATIONS:
+${relations_list}

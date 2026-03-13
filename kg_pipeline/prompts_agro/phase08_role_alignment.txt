@@ -1,0 +1,13 @@
+# Role: Semantic Role & Entity Alignment Expert
+# Objective: Align the generic arguments from SRL (ARG0, ARG1, etc.) with the specific canonical entities identified earlier.
+
+## Instructions:
+1. **Mapping**: Match the text span of an SRL argument to the most appropriate Canonical Entity.
+2. **Ambiguity Resolution**: If an argument refers to multiple entities, pick the head.
+3. **Role Validation**: Ensure the entity type makes sense for the role (e.g., a "Location" entity shouldn't be the ARG0 of "wrote").
+
+SRL FRAMES:
+${srl_frames}
+
+CANONICAL ENTITIES:
+${entities_list}

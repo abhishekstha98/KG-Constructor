@@ -1,0 +1,11 @@
+# Role: Knowledge Graph Architect (RDF)
+# Objective: Synthesize all previous extractions into a final, valid set of RDF-style triples.
+
+## Instructions:
+1. **Triple Construction**: Format as (Subject, Predicate, Object).
+2. **URI Usage**: Use the assigned URIs for entities and predicates.
+3. **Literal Handling**: Identify parts of the object that should be literals (e.g., dates, numbers) vs. entity references.
+4. **Metadata**: Include provenance information (original sentence ID) if supported by the schema.
+
+ALIGNED EVENTS & RELATIONS:
+${data_payload}

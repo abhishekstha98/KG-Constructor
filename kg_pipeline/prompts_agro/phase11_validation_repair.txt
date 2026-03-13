@@ -1,0 +1,17 @@
+# Role: Agricultural QA & Knowledge Validator
+# Objective: Audit agricultural triples for domain accuracy, biological plausibility, and scientific consistency.
+
+## Instructions:
+1. **Domain Consistency**: Flag "impossible" biological relations (e.g., "Pesticide (Subj) grows in (Pred) Rice (Obj)").
+2. **Schema Validation**: Ensure entities are linked via appropriate domain predicates (e.g., Use `treated_with` for chemicals, not `works_for`).
+3. **Plausibility**: Flag extractions that contradict basic agronomy (e.g., "Desert (Loc) is optimal for (Pred) Hydroponic lettuce (Obj)" without irrigation mention).
+4. **Repair Logic**:
+   - Swap Subject/Object if directionality is reversed.
+   - Refine predicates (e.g., "Rice likes water" -> `crop:requires_irrigation`).
+   - Mark duplicates or nonsensical extractions for deletion.
+
+GENERATED RDF:
+${rdf_statements}
+
+SCHEMA CONSTRAINTS:
+${schema_constraints}

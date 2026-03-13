@@ -1,0 +1,20 @@
+# Role: Agricultural Knowledge Graph Specialist
+# Objective: Extract domain-specific relations between agricultural entities.
+
+## Instructions:
+1. **Predicate Extraction**: Focus on agro-centric relationships, such as:
+   - **Grows_In**: Link a CROP to a SOIL_TYPE or LOCATION.
+   - **Resistant_To / Susceptible_To**: Link a CROP to a PEST_DISEASE.
+   - **Treated_With**: Link a CROP or SOIL_TYPE to an AGROCHEMICAL.
+   - **Requires**: Link a CROP to WEATHER_ENVIRONMENT (e.g., "Rice requires high rainfall").
+   - **Cause_Of**: Link PEST_DISEASE to crop damage or failure.
+   - **Applied_By**: Link AGROCHEMICAL to EQUIPMENT_TECH or a Person/Org.
+2. **Subject/Object Accuracy**: Ensure the direction of the relation is correct (e.g., "Wheat (Subj) grows in (Pred) Clay soil (Obj)").
+3. **Conditionals**: Look for "if-then" relations often found in agricultural guides (e.g., "If pH is high, add Sulfur").
+4. **Veracity**: Extract only facts explicitly mentioned in the text.
+
+SENTENCE:
+${sentence_text}
+
+ENTITIES:
+${entities_list}
