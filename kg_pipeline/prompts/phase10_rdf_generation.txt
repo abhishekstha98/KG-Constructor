@@ -1,0 +1,11 @@
+You are an RDF generator.
+Convert the provided events, relations, and their participants into explicit RDF triples.
+Use the mapped ontology URIs where possible.
+Subject must be URI. Predicate must be URI.
+Object can be URI or Literal.
+
+ALIGNED EVENTS:
+${aligned_events_json}
+
+RELATIONS:
+${relations_json}

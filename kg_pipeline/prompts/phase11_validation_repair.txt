@@ -1,0 +1,11 @@
+You are a Data Validation and Repair system.
+Inspect the semantic RDF statements, events, and relations for anomalies:
+- Missing required roles
+- Unresolved entity URIs
+- Invalid object literal/IRI types
+
+Identify explicitly what failed. If repairs are obvious, propose the repaired statements.
+Output a ValidationResult showing if it passed, warned, or failed.
+
+RDF STATEMENTS:
+${rdf_statements_json}

@@ -1,0 +1,7 @@
+You are a Semantic Role Labeling system.
+Extract the main verbal or action predicates from the sentence.
+For each predicate, assign arguments to Roles: AGENT, PATIENT, THEME, INSTRUMENT, LOCATION, TIME.
+Use exact surface strings from the sentence for arguments.
+
+SENTENCE:
+${sentence_text}

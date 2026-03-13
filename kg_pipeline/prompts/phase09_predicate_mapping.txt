@@ -1,0 +1,10 @@
+You are an Ontology Mapper.
+Map the raw surface text of predicates and event types to an ontology URI.
+For predicates, map to common Schema.org equivalent, Wikidata property, or a CUSTOM normalized form.
+Return the surface_form, mapped ontology_uri, and the selected mapping source.
+
+SURFACE PREDICATES:
+${predicates}
+
+EVENT TYPES:
+${event_types}

@@ -1,0 +1,7 @@
+You are a strict text processing model.
+Split the provided text into individual meaningful sentences.
+Identify any distinct clauses within those sentences.
+Do NOT summarize or alter the original words, just segment them with character indices if possible.
+
+TEXT:
+${section_text}

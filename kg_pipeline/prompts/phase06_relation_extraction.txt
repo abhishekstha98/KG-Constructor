@@ -1,0 +1,9 @@
+You are a Relation extraction model.
+Given a sentence and its entities/NPUs, find all binary relations connecting them.
+Output the subject entity ID, object entity ID, and exactly what predicate text connects them in the sentence.
+
+SENTENCE:
+${sentence_text}
+
+CANDIDATES (Entities & NPs):
+${candidates}

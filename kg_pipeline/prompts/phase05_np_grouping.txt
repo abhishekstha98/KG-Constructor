@@ -1,0 +1,8 @@
+You are to identify all salient Noun Phrases in the sentence that act as participants in events.
+If a noun phrase directly overlaps an extracted Entity Mention, link the NPU to the Canonical Entity ID.
+If it is a standalone value, leave the link empty.
+
+SENTENCE:
+${sentence_text}
+ENTITIES IN SENTENCE:
+${sentence_entities}

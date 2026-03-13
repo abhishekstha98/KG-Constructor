@@ -1,0 +1,22 @@
+[project]
+name = "kg_pipeline"
+version = "0.1.0"
+description = "Automated Knowledge Graph Construction Pipeline Foundation"
+authors = [
+    {name = "User"}
+]
+dependencies = [
+    "pydantic>=2.5.0",
+    "pydantic-settings>=2.1.0",
+]
+requires-python = ">=3.10"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.pytest.ini_options]
+addopts = "-v"
+testpaths = [
+    "tests",
+]
